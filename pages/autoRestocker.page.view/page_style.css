@@ -28,7 +28,7 @@ body {
   color: var(--text-muted);
 }
 
-/* 星空背景樣式 */
+/* 星空背景 */
 #star-canvas,
 #light-canvas {
   position: fixed;
@@ -36,7 +36,29 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1; /* 確保背景在其他內容後面 */
+  pointer-events: none; /* 禁止鼠標事件，避免影響其他元素 */
+  filter: blur(10px); /* 初始模糊 */
+  transition: filter 2s linear; /* 平滑過渡 */
+}
+
+#star-canvas {
   z-index: -1;
+  filter: blur(10px); /* 初始高斯模糊 */
+  transition: filter 2s linear; /* 線性模糊過渡 */
+}
+
+#light-canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+  filter: blur(10px); /* 初始高斯模糊 */
+  transition: filter 1.5s ease; /* 模糊過渡 */
 }
 
 /* 載入畫面樣式 */

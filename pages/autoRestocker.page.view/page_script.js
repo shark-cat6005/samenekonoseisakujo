@@ -24,17 +24,29 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('load', () => {
   console.log('Auto Restocker page loaded');
   const loader = document.getElementById('loader');
+  const starCanvas = document.getElementById('star-canvas');
+  const lightCanvas = document.getElementById('light-canvas');
+
+  // 隱藏載入畫面
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = '0'; // 添加淡出效果
       setTimeout(() => {
         loader.style.display = 'none'; // 完全隱藏載入畫面
       }, 500); // 等待淡出動畫完成後隱藏
-    }, 500); // 模擬 2 秒的載入時間
+    }, 500); // 模擬載入時間
   }
 
-  const starCanvas = document.getElementById('star-canvas');
-  const lightCanvas = document.getElementById('light-canvas');
+  // 移除星空背景的模糊效果
+  if (starCanvas) {
+    starCanvas.style.transition = 'filter 2s linear'; // 確保過渡效果
+    starCanvas.style.filter = 'blur(0)'; // 移除模糊
+  }
+
+  if (lightCanvas) {
+    lightCanvas.style.transition = 'filter 2s linear'; // 確保過渡效果
+    lightCanvas.style.filter = 'blur(0)'; // 移除模糊
+  }
 
   if (starCanvas && lightCanvas) {
     const starCtx = starCanvas.getContext('2d');

@@ -211,8 +211,6 @@ header {
   height: 100%;
   z-index: -1; /* 確保背景在其他內容後面 */
   pointer-events: none; /* 禁止鼠標事件，避免影響其他元素 */
-  filter: blur(10px); /* 初始模糊 */
-  transition: filter 2s linear; /* 平滑過渡 */
 }
 
 #star-canvas {
