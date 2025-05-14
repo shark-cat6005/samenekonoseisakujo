@@ -1,0 +1,240 @@
+/* 主題色系 */
+:root {
+  --space-dark: #0a0f2c;
+  --space-medium: #121a3b;
+  --space-light: #1a2340;
+  --highlight: #4a90e2;
+  /* 藍色高光 */
+  --text-light: #ffffff;
+  --text-muted: #b0c6e0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 50%, var(--space-dark), var(--space-medium), var(--space-light));
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Inter', 'Segoe UI', 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-light);
+}
+
+/* Header 樣式 */
+header {
+  display: flex;
+  align-items: flex-start; /* 垂直靠上對齊 */
+  justify-content: flex-start; /* 水平靠左對齊 */
+  height: 80px; /* 固定高度 */
+  padding: 0 20px; /* 保持左右內邊距 */
+  box-sizing: border-box;
+}
+
+/* LOGO容器樣式 */
+.logo-container {
+  display: flex;
+  align-items: center; /* 垂直居中對齊 */
+  gap: 10px; /* 元素之間的間距 */
+  text-decoration: none;
+  color: var(--text-light);
+  position: relative; /* 使用相對定位 */
+  left: -25px; /* 向左偏移 10px */
+}
+
+/* LOGO小字樣式 */
+.logo-subtext {
+  font-size: 0.7em; /* 小字的字體大小 */
+  color: #aaa; /* 小字的顏色 */
+  font-style: italic; /* 斜體效果（可選） */
+  line-height: 1; /* 確保行高與字體大小一致 */
+  position: relative; /* 使用相對定位 */
+  top: 4px; /* 向下微調，讓小字與 LOGO 文字對齊 */
+  left: -8px; /* 向右微調，讓小字與 LOGO 文字對齊 */
+}
+
+/* LOGO圖片樣式 */
+.logo {
+  height: 64px; /* 放大圖片高度 */
+  margin-right: -15px; /* 減少圖片與文字之間的間距 */
+  display: flex;
+  align-self: center; /* 確保圖片與文字平行 */
+}
+
+/* LOGO文字樣式 */
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif; /* 使用自訂字體 */
+  line-height: 1; /* 確保文字行高與字體大小一致 */
+  position: relative; /* 使用相對定位 */
+  top: -2px; /* 向上微調，讓文字與圖片平行 */
+  left: -5px; /* 向左移動 10px */
+}
+
+/* 卡片容器 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 每行固定顯示 4 張卡片 */
+  gap: 20px; /* 卡片之間的間距 */
+  width: 1200px; /* 固定容器寬度 */
+  margin: 0 auto; /* 讓容器水平居中 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 卡片樣式 */
+.item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* 背景部分 */
+.background {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0; /* 圓角效果，只作用於上方 */
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 圖標與名稱部分 */
+.icon-and-name {
+  display: flex;
+  align-items: center; /* 垂直居中對齊 */
+  gap: 10px; /* 圖標與名稱之間的間距 */
+  padding: 10px;
+}
+
+.pack-icon-container {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pack-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  transition: transform 0.3s ease;
+}
+
+.icon-and-name .title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+/* 描述與類型部分 */
+.description-and-type {
+  padding: 10px;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #ccc;
+  margin: 0 0 5px;
+}
+
+.type {
+  font-size: 0.8em;
+  color: #aaa;
+}
+
+/* 載入畫面樣式 */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* 深色背景，覆蓋星空 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* 確保載入畫面在最上層 */
+  opacity: 1; /* 確保初始時完全可見 */
+  transition: opacity 0.5s ease; /* 添加淡出動畫 */
+}
+
+#loader-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000; /* 背景顏色 */
+}
+
+#pixel-spinner {
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* 旋轉動畫 */
+}
+
+/* 旋轉動畫 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 星空背景 */
+#star-canvas,
+#light-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 確保背景在其他內容後面 */
+  pointer-events: none; /* 禁止鼠標事件，避免影響其他元素 */
+}
+
+#star-canvas {
+  z-index: -1;
+  filter: blur(10px); /* 初始高斯模糊 */
+  transition: filter 2s linear; /* 線性模糊過渡 */
+}
+
+#light-canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
+  filter: blur(10px); /* 初始高斯模糊 */
+  transition: filter 1.5s ease; /* 模糊過渡 */
+}
+
+a {
+  text-decoration: none;
+  /* 移除超連結的下劃線 */
+  color: inherit;
+  /* 繼承文字顏色 */
+}
