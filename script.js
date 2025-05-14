@@ -232,14 +232,27 @@ cards.forEach(card => {
 });
 
 window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
   const starCanvas = document.getElementById('star-canvas');
   const lightCanvas = document.getElementById('light-canvas');
 
-  // 移除模糊效果
+  if (loader) {
+    setTimeout(() => {
+      loader.style.opacity = '0'; // 添加淡出效果
+      setTimeout(() => {
+        loader.style.display = 'none'; // 完全隱藏載入畫面
+      }, 500); // 等待淡出動畫完成後隱藏
+    }, 500); // 模擬載入時間
+  }
+
+  // 確保在載入完成後移除模糊效果
   if (starCanvas) {
+    starCanvas.style.transition = 'filter 2s linear'; // 確保過渡效果
     starCanvas.style.filter = 'blur(0)';
   }
+
   if (lightCanvas) {
+    lightCanvas.style.transition = 'filter 2s linear'; // 確保過渡效果
     lightCanvas.style.filter = 'blur(0)';
   }
 });
