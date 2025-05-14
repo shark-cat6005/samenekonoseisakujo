@@ -11,33 +11,33 @@ const cards = [
     title: "Another Addon",
     description: "Enhance your Minecraft experience with this amazing addon!",
     type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
+    backgroundImage: "assets/autoRestocker_background.png",
+    iconImage: "assets/autoRestocker.pack_icon.png",
+    link: "pages/view/autoRestocker.page.html"
   },
   {
     title: "Another Addon",
     description: "Enhance your Minecraft experience with this amazing addon!",
     type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
+    backgroundImage: "assets/autoRestocker_background.png",
+    iconImage: "assets/autoRestocker.pack_icon.png",
+    link: "pages/view/autoRestocker.page.html"
   },
   {
     title: "Another Addon",
     description: "Enhance your Minecraft experience with this amazing addon!",
     type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
+    backgroundImage: "assets/autoRestocker_background.png",
+    iconImage: "assets/autoRestocker.pack_icon.png",
+    link: "pages/view/autoRestocker.page.html"
   },
   {
     title: "Another Addon",
     description: "Enhance your Minecraft experience with this amazing addon!",
     type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
+    backgroundImage: "assets/autoRestocker_background.png",
+    iconImage: "assets/autoRestocker.pack_icon.png",
+    link: "pages/view/autoRestocker.page.html"
   }
 ];
 
