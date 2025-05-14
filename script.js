@@ -5,7 +5,7 @@ const cards = [
     type: "Add-on",
     backgroundImage: "assets/autoRestocker_background.png",
     iconImage: "assets/autoRestocker.pack_icon.png",
-    link: "pages/view/autoRestocker.page.html"
+    link: "pages/autoRestocker.page.view/autoRestocker.page.html"
   },
   {
     title: "Another Addon",
