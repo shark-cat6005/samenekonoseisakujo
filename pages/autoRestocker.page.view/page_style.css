@@ -1,4 +1,4 @@
-
+/* 確保背景顯示 */
 body {
   background: radial-gradient(circle at 50% 50%, #0a0f2c, #121a3b, #1a2340);
   color: #ffffff;
@@ -11,10 +11,11 @@ body {
   max-width: 800px;
   margin: 100px auto;
   padding: 20px;
-  background: var(--space-light);
+  background: rgba(26, 35, 64, 0.8); /* 半透明背景 */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
+  backdrop-filter: blur(10px); /* 高斯模糊效果 */
 }
 
 .content h1 {
@@ -27,15 +28,150 @@ body {
   color: var(--text-muted);
 }
 
+/* 星空背景樣式 */
+#star-canvas,
+#light-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* 載入畫面樣式 */
 #loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9); /* 深色背景，覆蓋星空 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* 確保載入畫面在最上層 */
+  opacity: 1; /* 確保初始時完全可見 */
+  transition: opacity 0.5s ease; /* 添加淡出動畫 */
+}
+
+#loader-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000; /* 背景顏色 */
+}
+
+#pixel-spinner {
+  width: 64px;
+  height: 64px;
+  background: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite; /* 旋轉動畫 */
+}
+
+/* 旋轉動畫 */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-title {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.download-banner {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
+}
+
+.download-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ff5722;
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+/* LOGO容器樣式 */
+.logo-container {
+  display: flex;
+  align-items: center; /* 垂直居中對齊 */
+  gap: 10px; /* 圖片與文字之間的間距 */
+  text-decoration: none;
+  color: var(--text-light);
+  position: relative;
+  left: -5px; /* 向左偏移 */
+}
+
+/* LOGO圖片樣式 */
+.logo {
+  height: 64px; /* LOGO圖片高度 */
+  margin-right: -15px; /* 減少圖片與文字之間的間距 */
+  display: flex;
+  align-self: center; /* 確保圖片與文字平行 */
+}
+
+/* LOGO文字樣式 */
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif; /* 使用日文字體 */
+  line-height: 1; /* 確保文字行高與字體大小一致 */
+  position: relative;
+  top: -2px; /* 向上微調，讓文字與圖片平行 */
+  left: -5px; /* 向左微調 */
+}
+
+/* LOGO小字樣式 */
+.logo-subtext {
+  font-size: 0.7em; /* 小字的字體大小 */
+  color: #aaa; /* 小字的顏色 */
+  font-style: italic; /* 斜體效果 */
+  line-height: 1; /* 確保行高與字體大小一致 */
+  position: relative;
+  top: 4px; /* 向下微調，讓小字與 LOGO 文字對齊 */
+  left: -8px; /* 向右微調 */
 }
