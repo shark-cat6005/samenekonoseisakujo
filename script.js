@@ -8,36 +8,12 @@ const cards = [
     link: "pages/autoRestocker.page.view/autoRestocker.page.html"
   },
   {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
-  },
-  {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
-  },
-  {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
-  },
-  {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/anotherAddon_background.png",
-    iconImage: "assets/anotherAddon.pack_icon.png",
-    link: "pages/view/anotherAddon.page.html"
+    title: "Minecart Chat Rank",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
   }
 ];
 
