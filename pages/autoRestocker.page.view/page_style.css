@@ -102,9 +102,12 @@ body {
   }
 }
 
+/* 橫幅樣式 */
 .banner {
+  position: relative;
+  top: 20px; /* 可根據需求調整 */
   width: 100%;
-  height: 300px;
+  height: 150px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -112,39 +115,67 @@ body {
   align-items: center;
   color: #ffffff;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
 
 .banner-title {
-  font-size: 3em;
+  font-size: 1.8em;
   font-weight: bold;
 }
 
-.download-banner {
-  width: 100%;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
+/* LOGO容器樣式 */
+.logo-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: #ffffff;
-  text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  margin-top: 50px;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-light);
+  position: relative;
+  left: -5px;
 }
 
-.download-title {
-  font-size: 2em;
-  margin-bottom: 20px;
+/* LOGO圖片樣式 */
+.logo {
+  height: 64px;
+  margin-right: -15px;
+  display: flex;
+  align-self: center;
+}
+
+/* LOGO文字樣式 */
+.logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1;
+  position: relative;
+  top: -2px;
+  left: -5px;
+}
+
+/* LOGO小字樣式 */
+.logo-subtext {
+  font-size: 0.7em;
+  color: #aaa;
+  font-style: italic;
+  line-height: 1;
+  position: relative;
+  top: 4px;
+  left: -8px;
+}
+
+/* 下載按鈕樣式 */
+.download-section {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .download-button {
   display: inline-block;
-  padding: 15px 30px;
-  background-color: #ff5722;
-  color: #ffffff;
-  font-size: 1.2em;
+  padding: 10px 20px;
+  background-color: var(--highlight);
+  color: var(--text-light);
+  font-size: 1em;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
@@ -153,47 +184,6 @@ body {
 }
 
 .download-button:hover {
-  background-color: #e64a19;
+  background-color: #3a78c2;
   transform: scale(1.05);
-}
-
-/* LOGO容器樣式 */
-.logo-container {
-  display: flex;
-  align-items: center; /* 垂直居中對齊 */
-  gap: 10px; /* 圖片與文字之間的間距 */
-  text-decoration: none;
-  color: var(--text-light);
-  position: relative;
-  left: -5px; /* 向左偏移 */
-}
-
-/* LOGO圖片樣式 */
-.logo {
-  height: 64px; /* LOGO圖片高度 */
-  margin-right: -15px; /* 減少圖片與文字之間的間距 */
-  display: flex;
-  align-self: center; /* 確保圖片與文字平行 */
-}
-
-/* LOGO文字樣式 */
-.logo-text {
-  font-size: 1.5em;
-  font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif; /* 使用日文字體 */
-  line-height: 1; /* 確保文字行高與字體大小一致 */
-  position: relative;
-  top: -2px; /* 向上微調，讓文字與圖片平行 */
-  left: -5px; /* 向左微調 */
-}
-
-/* LOGO小字樣式 */
-.logo-subtext {
-  font-size: 0.7em; /* 小字的字體大小 */
-  color: #aaa; /* 小字的顏色 */
-  font-style: italic; /* 斜體效果 */
-  line-height: 1; /* 確保行高與字體大小一致 */
-  position: relative;
-  top: 4px; /* 向下微調，讓小字與 LOGO 文字對齊 */
-  left: -8px; /* 向右微調 */
 }
