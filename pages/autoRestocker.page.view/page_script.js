@@ -1,31 +1,11 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const loader = document.getElementById('loader');
-  const pixelSpinner = document.getElementById('pixel-spinner');
-
-  // 確保載入畫面顯示
-  if (loader) {
-    loader.style.display = 'flex'; // 確保載入畫面顯示
-    loader.style.opacity = '1';   // 確保完全可見
-  }
-
-  // 確保像素旋轉動畫立即啟動
-  if (pixelSpinner) {
-    const ctx = pixelSpinner.getContext('2d');
-    let t = 0;
-    function loop() {
-      drawPixelSpinner(ctx, t);
-      t += 0.18;
-      pixelSpinner._spinReq = requestAnimationFrame(loop);
-    }
-    loop();
-  }
-});
-
-window.addEventListener('load', () => {
   console.log('Auto Restocker page loaded');
+
   const loader = document.getElementById('loader');
   const starCanvas = document.getElementById('star-canvas');
   const lightCanvas = document.getElementById('light-canvas');
+  const banner = document.querySelector('.banner-img');
+  const bannerContainer = document.querySelector('.banner');
 
   // 隱藏載入畫面
   if (loader) {
@@ -48,6 +28,17 @@ window.addEventListener('load', () => {
     lightCanvas.style.filter = 'blur(0)'; // 移除模糊
   }
 
+  // 視差滾動效果
+  if (banner && bannerContainer) {
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const parallaxSpeed = 0.3;
+      const offset = Math.max(0, Math.min(scrollY * parallaxSpeed, bannerContainer.offsetHeight / 2));
+      banner.style.transform = `translateY(${offset}px)`;
+    });
+  }
+
+  // 星空背景與光效
   if (starCanvas && lightCanvas) {
     const starCtx = starCanvas.getContext('2d');
     const lightCtx = lightCanvas.getContext('2d');
@@ -91,6 +82,6 @@ window.addEventListener('load', () => {
     }
 
     window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
+    resizeCanvas(); // 初始化時調用一次
   }
 });

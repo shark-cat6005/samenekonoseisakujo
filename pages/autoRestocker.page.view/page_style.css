@@ -106,89 +106,99 @@ body {
   }
 }
 
-.banner-title {
-  font-size: 1.5em;
-  font-weight: bold;
+/* Header 樣式 */
+header {
+  display: flex;
+  align-items: flex-start; /* 垂直靠上對齊 */
+  justify-content: flex-start; /* 水平靠左對齊 */
+  height: 80px; /* 固定高度 */
+  padding: 0 20px; /* 保持左右內邊距 */
+  box-sizing: border-box;
 }
 
 /* LOGO容器樣式 */
 .logo-container {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: center; /* 垂直居中對齊 */
+  gap: 10px; /* 元素之間的間距 */
   text-decoration: none;
   color: var(--text-light);
-  position: relative;
-  left: -5px;
+  position: relative; /* 使用相對定位 */
+  left: -25px; /* 向左偏移 */
+}
+
+/* LOGO小字樣式 */
+.logo-subtext {
+  font-size: 0.7em; /* 小字的字體大小 */
+  color: #aaa; /* 小字的顏色 */
+  font-style: italic; /* 斜體效果 */
+  line-height: 1; /* 確保行高與字體大小一致 */
+  position: relative; /* 使用相對定位 */
+  top: 4px; /* 向下微調，讓小字與 LOGO 文字對齊 */
+  left: -8px; /* 向右微調，讓小字與 LOGO 文字對齊 */
 }
 
 /* LOGO圖片樣式 */
 .logo {
-  height: 64px;
-  margin-right: -15px;
+  height: 64px; /* 放大圖片高度 */
+  margin-right: -15px; /* 減少圖片與文字之間的間距 */
   display: flex;
-  align-self: center;
+  align-self: center; /* 確保圖片與文字平行 */
 }
 
 /* LOGO文字樣式 */
 .logo-text {
   font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif;
-  line-height: 1;
-  position: relative;
-  top: -2px;
-  left: -5px;
+  font-family: 'Noto Sans JP', sans-serif; /* 使用自訂字體 */
+  line-height: 1; /* 確保文字行高與字體大小一致 */
+  position: relative; /* 使用相對定位 */
+  top: -2px; /* 向上微調，讓文字與圖片平行 */
+  left: -5px; /* 向左移動 */
 }
 
-/* LOGO小字樣式 */
-.logo-subtext {
-  font-size: 0.7em;
-  color: #aaa;
-  font-style: italic;
-  line-height: 1;
-  position: relative;
-  top: 4px;
-  left: -8px;
-}
-
-/* 橫幅樣式 */
+/* Banner 樣式 */
 .banner {
   position: relative;
-  width: 100%; /* 確保橫幅寬度為全寬 */
-  height: 200px; /* 設置固定高度 */
-  overflow: hidden; /* 隱藏超出容器的內容 */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1a2340; /* 添加背景色作為占位 */
-  margin: 0; /* 移除與容器邊緣的空隙 */
-  border-radius: 10px; /* 添加圓角 */
+  background-color: #1a2340;
+  margin: 0;
+  border-radius: 10px;
 }
 
 .banner-img {
-  width: 100%; /* 圖片寬度設置為全寬 */
-  height: auto; /* 按比例縮放圖片 */
-  object-fit: cover; /* 確保圖片填滿容器 */
-  border-radius: 10px; /* 確保圖片也有圓角 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom; /* 確保圖片底部可見 */
+  transform: translateY(0);
+  transition: none; /* 無延遲，確保滾動時即時更新 */
 }
 
 .banner-title {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffffff;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  font-family: 'Inter', sans-serif; /* 使用更現代的字體 */
+  z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Pack Info 區塊樣式 */
+/* 固定 Pack Info 區塊的位置，避免跳動 */
 .pack-info {
-  margin: 20px; /* 與容器邊緣保持距離 */
-  padding: 20px; /* 添加內邊距，讓內容與邊緣保持距離 */
-  background: none; /* 移除背景色 */
-  border-radius: 0; /* 移除圓角 */
-  box-shadow: none; /* 移除陰影 */
+  margin-top: 20px; /* 固定與 banner 的距離 */
+  padding: 20px;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
   text-align: left;
   color: var(--text-light); /* 保持文字顏色 */
 }
@@ -198,6 +208,7 @@ body {
   color: var(--highlight); /* 使用主題中的高光顏色 */
   margin-bottom: 10px;
   font-family: 'Inter', sans-serif; /* 使用現代字體 */
+  text-align: center; /* 確保文字居中 */
 }
 
 .pack-info p {
