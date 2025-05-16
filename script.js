@@ -8,7 +8,87 @@ const cards = [
     link: "pages/autoRestocker.page.view/autoRestocker.page.html"
   },
   {
-    title: "Minecart Chat Rank",
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
     description: "Coming soon...",
     type: "",
     backgroundImage: "assets/unknown.png",
