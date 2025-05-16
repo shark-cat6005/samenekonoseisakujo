@@ -152,12 +152,68 @@ body {
   left: -8px;
 }
 
-/* 下載按鈕樣式 */
-.download-section {
-  text-align: center;
-  margin-top: 20px;
+/* 橫幅樣式 */
+.banner {
+  position: relative;
+  width: 100%; /* 確保橫幅寬度為全寬 */
+  height: 200px; /* 設置固定高度 */
+  overflow: hidden; /* 隱藏超出容器的內容 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a2340; /* 添加背景色作為占位 */
+  margin: 0; /* 移除與容器邊緣的空隙 */
+  border-radius: 10px; /* 添加圓角 */
 }
 
+.banner-img {
+  width: 100%; /* 圖片寬度設置為全寬 */
+  height: auto; /* 按比例縮放圖片 */
+  object-fit: cover; /* 確保圖片填滿容器 */
+  border-radius: 10px; /* 確保圖片也有圓角 */
+}
+
+.banner-title {
+  position: absolute;
+  color: #ffffff;
+  font-size: 1.8em;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  font-family: 'Inter', sans-serif; /* 使用更現代的字體 */
+}
+
+/* Pack Info 區塊樣式 */
+.pack-info {
+  margin: 20px; /* 與容器邊緣保持距離 */
+  padding: 20px; /* 添加內邊距，讓內容與邊緣保持距離 */
+  background: none; /* 移除背景色 */
+  border-radius: 0; /* 移除圓角 */
+  box-shadow: none; /* 移除陰影 */
+  text-align: left;
+  color: var(--text-light); /* 保持文字顏色 */
+}
+
+.pack-info h3 {
+  font-size: 1.5em;
+  color: var(--highlight); /* 使用主題中的高光顏色 */
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif; /* 使用現代字體 */
+}
+
+.pack-info p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: var(--text-muted); /* 使用較柔和的文字顏色 */
+  font-family: 'Inter', sans-serif; /* 使用現代字體 */
+}
+
+/* 下載按鈕容器樣式 */
+.download-container {
+  margin-top: 20px; /* 與上方內容保持距離 */
+  text-align: center; /* 按鈕居中 */
+}
+
+/* 下載按鈕樣式 */
 .download-button {
   display: inline-block;
   padding: 10px 20px;
@@ -167,40 +223,23 @@ body {
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
+  transition: transform 0.2s ease, background-color 0.3s ease; /* 添加過渡效果 */
 }
 
 .download-button:hover {
-  background-color: #3a78c2;
-  transform: scale(1.05);
+  transform: scale(1.05); /* 懸停時放大效果 */
+  background-color: #3a78c2; /* 懸停時背景顏色變深 */
 }
 
-.banner {
-  position: relative;
-  height: 100px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* 連結樣式 */
+.pack-info a {
+  color: var(--highlight); /* 使用主題中的高光顏色 */
+  text-decoration: none; /* 移除下劃線 */
+  font-weight: bold; /* 加粗字體 */
+  transition: color 0.3s ease; /* 添加過渡效果 */
 }
 
-.banner-img {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-  display: block;
-}
-
-.banner-title {
-  position: relative;
-  z-index: 1;
-  color: white;
-  font-size: 2em;
+.pack-info a:hover {
+  color: #3a78c2; /* 懸停時顏色變深 */
 }
