@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Restocker Page</title>
+  <link rel="stylesheet" href="page_style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- 載入畫面 -->
+  <div id="loader">
+    <canvas id="loader-bg"></canvas>
+    <canvas id="pixel-spinner" width="64" height="64"></canvas>
+  </div>
+
+  <!-- 星空背景 -->
+  <canvas id="star-canvas"></canvas>
+  <canvas id="light-canvas"></canvas>
+
+  <header>
+    <a href="../../index.html" class="logo-container">
+      <img src="../../assets/main.logo.png" alt="Logo" class="logo">
+      <span class="logo-text" translate="no">サメ猫製作所</span>
+      <span class="logo-subtext" translate="no">@samenekonoseisakujo</span>
+    </a>
+  </header>
+
+  <div class="content">
+    <div class="banner">
+      <img class="banner-img" src="../../assets/autoRestocker_background.png" alt="Banner background">
+      <h2 class="banner-title">Auto Restocker</h2>
+    </div>
+
+    <div class="pack-info">
+      <h3>Pack Info</h3>
+      <p>
+        Automatically refill depleted items<br>
+        Supports Totem of Undying restocking<br>
+        Supports block placement and capture<br>
+        Partial support for tool restocking<br>
+        Does not support weapon restocking (under development)<br><br>
+        Latest version: v1.0.0<br>
+        Compatible Minecraft Version: 1.21.71+<br>
+        Experimental Features Required:<br>
+        - Beta API #Required<br><br>
+        Author: shark_cat._.<br>
+        Licensed under CC<br>
+        This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+        License.<br>
+        © 2025 by shark_cat._.<br>
+        <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+          target="_blank">https://creativecommons.org/licenses/by-nc-nd/4.0/</a>
+      </p>
+    </div>
+
+    <div class="download-container">
+      <a href="../../downloads/autorestocker.zip" class="download-button">Download Auto Restocker</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 by shark_cat._.</p>
+    <p>We're not affiliated with or endorsed by Mojang, AB.</p>
+  </footer>
+
+  <script src="page_script.js"></script>
+</body>
+
+</html>

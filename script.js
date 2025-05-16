@@ -5,39 +5,95 @@ const cards = [
     type: "Add-on",
     backgroundImage: "assets/autoRestocker_background.png",
     iconImage: "assets/autoRestocker.pack_icon.png",
-    link: "pages/view/autoRestocker.page.html"
+    link: "pages/autoRestocker.page.view/autoRestocker.page.html"
   },
   {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/autoRestocker_background.png",
-    iconImage: "assets/autoRestocker.pack_icon.png",
-    link: "pages/view/autoRestocker.page.html"
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
   },
   {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/autoRestocker_background.png",
-    iconImage: "assets/autoRestocker.pack_icon.png",
-    link: "pages/view/autoRestocker.page.html"
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
   },
   {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/autoRestocker_background.png",
-    iconImage: "assets/autoRestocker.pack_icon.png",
-    link: "pages/view/autoRestocker.page.html"
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
   },
   {
-    title: "Another Addon",
-    description: "Enhance your Minecraft experience with this amazing addon!",
-    type: "Add-on",
-    backgroundImage: "assets/autoRestocker_background.png",
-    iconImage: "assets/autoRestocker.pack_icon.png",
-    link: "pages/view/autoRestocker.page.html"
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
   }
 ];
 
