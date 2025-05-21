@@ -1,10 +1,8 @@
-/* 主題色系 */
 :root {
   --space-dark: #0a0f2c;
   --space-medium: #121a3b;
   --space-light: #1a2340;
   --highlight: #4a90e2;
-  /* 藍色高光 */
   --text-light: #ffffff;
   --text-muted: #b0c6e0;
 }
@@ -19,69 +17,63 @@ body {
   color: var(--text-light);
 }
 
-/* Header 樣式 */
 header {
   display: flex;
-  align-items: flex-start; /* 垂直靠上對齊 */
-  justify-content: flex-start; /* 水平靠左對齊 */
-  height: 80px; /* 固定高度 */
-  padding: 0 20px; /* 保持左右內邊距 */
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 80px;
+  padding: 0 20px;
   box-sizing: border-box;
 }
 
-/* LOGO容器樣式 */
 .logo-container {
   display: flex;
-  align-items: center; /* 垂直居中對齊 */
-  gap: 10px; /* 元素之間的間距 */
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
   color: var(--text-light);
-  position: relative; /* 使用相對定位 */
-  left: -25px; /* 向左偏移 10px */
+  position: relative;
+  left: -25px;
 }
 
-/* LOGO小字樣式 */
 .logo-subtext {
-  font-size: 0.7em; /* 小字的字體大小 */
-  color: #aaa; /* 小字的顏色 */
-  font-style: italic; /* 斜體效果（可選） */
-  line-height: 1; /* 確保行高與字體大小一致 */
-  position: relative; /* 使用相對定位 */
-  top: 4px; /* 向下微調，讓小字與 LOGO 文字對齊 */
-  left: -8px; /* 向右微調，讓小字與 LOGO 文字對齊 */
+  font-size: 0.7em;
+  color: #aaa;
+  font-style: italic;
+  line-height: 1;
+  position: relative;
+  top: 4px;
+  left: -8px;
 }
 
-/* LOGO圖片樣式 */
 .logo {
-  height: 64px; /* 放大圖片高度 */
-  margin-right: -15px; /* 減少圖片與文字之間的間距 */
+  height: 64px;
+  margin-right: -15px;
   display: flex;
-  align-self: center; /* 確保圖片與文字平行 */
+  align-self: center;
 }
 
-/* LOGO文字樣式 */
 .logo-text {
   font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif; /* 使用自訂字體 */
-  line-height: 1; /* 確保文字行高與字體大小一致 */
-  position: relative; /* 使用相對定位 */
-  top: -2px; /* 向上微調，讓文字與圖片平行 */
-  left: -5px; /* 向左移動 10px */
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1;
+  position: relative;
+  top: -2px;
+  left: -5px;
 }
 
-/* 卡片容器 */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 每行固定顯示 4 張卡片 */
-  gap: 20px; /* 卡片之間的間距 */
-  width: 1200px; /* 固定容器寬度 */
-  margin: 0 auto; /* 讓容器水平居中 */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* 卡片樣式 */
+/* card */
 .item {
   background: #1a1a1a;
   border: 1px solid #333;
@@ -98,12 +90,11 @@ header {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-/* 背景部分 */
 .background {
   width: 100%;
   height: 150px;
   overflow: hidden;
-  border-radius: 8px 8px 0 0; /* 圓角效果，只作用於上方 */
+  border-radius: 8px 8px 0 0;
 }
 
 .background img {
@@ -112,11 +103,10 @@ header {
   object-fit: cover;
 }
 
-/* 圖標與名稱部分 */
 .icon-and-name {
   display: flex;
-  align-items: center; /* 垂直居中對齊 */
-  gap: 10px; /* 圖標與名稱之間的間距 */
+  align-items: center;
+  gap: 10px;
   padding: 10px;
 }
 
@@ -144,7 +134,6 @@ header {
   margin: 0;
 }
 
-/* 描述與類型部分 */
 .description-and-type {
   padding: 10px;
 }
@@ -160,27 +149,26 @@ header {
   color: #aaa;
 }
 
-/* 載入畫面樣式 */
 #loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9); /* 深色背景，覆蓋星空 */
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999; /* 確保載入畫面在最上層 */
-  opacity: 1; /* 確保初始時完全可見 */
-  transition: opacity 0.5s ease; /* 添加淡出動畫 */
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 #loader-bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #000; /* 背景顏色 */
+  background: #000;
 }
 
 #pixel-spinner {
@@ -188,20 +176,19 @@ header {
   height: 64px;
   background: transparent;
   border-radius: 50%;
-  animation: spin 1s linear infinite; /* 旋轉動畫 */
+  animation: spin 1s linear infinite;
 }
 
-/* 旋轉動畫 */
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-/* 星空背景 */
 #star-canvas,
 #light-canvas {
   position: fixed;
@@ -209,14 +196,14 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* 確保背景在其他內容後面 */
-  pointer-events: none; /* 禁止鼠標事件，避免影響其他元素 */
+  z-index: -1;
+  pointer-events: none;
 }
 
 #star-canvas {
   z-index: -1;
-  filter: blur(10px); /* 初始高斯模糊 */
-  transition: filter 2s linear; /* 線性模糊過渡 */
+  filter: blur(10px);
+  transition: filter 2s linear;
 }
 
 #light-canvas {
@@ -228,13 +215,11 @@ header {
   pointer-events: none;
   z-index: -1;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
-  filter: blur(10px); /* 初始高斯模糊 */
-  transition: filter 1.5s ease; /* 模糊過渡 */
+  filter: blur(10px);
+  transition: filter 1.5s ease;
 }
 
 a {
   text-decoration: none;
-  /* 移除超連結的下劃線 */
   color: inherit;
-  /* 繼承文字顏色 */
 }
