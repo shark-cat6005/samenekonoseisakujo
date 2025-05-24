@@ -174,10 +174,10 @@ header {
 .banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: bottom; /* 確保圖片底部可見 */
-  transform: translateY(0);
-  transition: none; /* 無延遲，確保滾動時即時更新 */
+  object-fit: cover; /* 確保圖片填滿容器 */
+  object-position: bottom; /* 初始位置：顯示圖片底部 */
+  transform: none; /* 不使用 transform，改用 object-position */
+  transition: none; /* 移除過渡效果，確保滾動時即時更新 */
 }
 
 .banner-title {
