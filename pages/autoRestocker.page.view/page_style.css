@@ -254,3 +254,85 @@ header {
 .pack-info a:hover {
   color: #3a78c2; /* 懸停時顏色變深 */
 }
+
+/* 下拉清單樣式 */
+.extra-info {
+  margin-top: 20px; /* 與上方物件保持距離 */
+  margin-bottom: 20px; /* 與下方物件保持距離 */
+  padding: 10px 10px; /* 內容物的上下空間為 10px，左右空間為 10px */
+  background-color: transparent; /* 完全透明背景 */
+  border-radius: 10px; /* 圓弧邊角 */
+  outline: 1px solid rgba(255, 255, 255, 0.8); /* 白色發光邊框 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 添加柔和的發光效果 */
+  display: none; /* 初始隱藏 */
+  color: #ffffff; /* 白色文字，保持清晰可見 */
+  min-height: 5px; /* 設置最低高度為 5px */
+}
+
+.extra-info p {
+  margin: 5px 0; /* 設置上下間距為 5px */
+  line-height: 1.5; /* 調整行高 */
+  text-indent: 10px; /* 文字與左側保持距離 */
+}
+
+/* 嵌套下拉清單樣式 */
+.extra-info .extra-info {
+  margin-left: 20px; /* 嵌套下拉清單向右偏移 */
+  padding-left: 15px; /* 內部文字與左側保持距離 */
+  outline: 1px solid rgba(255, 255, 255, 0.8); /* 白色發光邊框 */
+  border-radius: 10px; /* 圓弧邊角 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 添加柔和的發光效果 */
+}
+
+.hidden {
+  display: none; /* 隱藏元素 */
+}
+
+.visible {
+  display: block; /* 顯示元素 */
+}
+
+/* 下拉清單按鈕樣式 */
+.toggle-button {
+  background-color: #3a78c2; /* 深蓝色按钮 */
+  color: #ffffff; /* 白色文字 */
+  padding: 5px 15px; /* 按钮内部上下间距为 5px，左右间距为 15px */
+  margin: 5px 0; /* 按钮外部上下间距为 5px */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em; /* 縮小字體大小 */
+  display: flex; /* 使用 flex 排版 */
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 左右對齊 */
+  gap: 10px; /* 按鈕內部元素間距 */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toggle-button:hover {
+  background-color: #2a5a92; /* 懸停時背景顏色變深 */
+  transform: scale(1.05); /* 懸停時放大效果 */
+}
+
+/* 三角形樣式 */
+.toggle-button::before {
+  content: ''; /* 添加三角形 */
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #ffffff; /* 白色三角形 */
+  margin-left: auto; /* 將三角形推到右側 */
+  margin-right: 15px; /* 與文字保持更大的距離 */
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 拋物線速度 */
+}
+
+.toggle-button.rotate::before {
+  transform: rotate(180deg); /* 三角形旋轉 */
+}
+
+.toggle-button {
+  display: inline-block; /* 確保按鈕可見 */
+  cursor: pointer; /* 確保按鈕可點擊 */
+}

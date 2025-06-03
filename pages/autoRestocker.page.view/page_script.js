@@ -84,4 +84,16 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', resizeCanvas);
     resizeCanvas(); // 初始化時調用一次
   }
+
+  const toggleButtons = document.querySelectorAll('.toggle-button');
+  toggleButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const extraInfo = button.nextElementSibling;
+      if (extraInfo && extraInfo.classList.contains('extra-info')) {
+        extraInfo.classList.toggle('hidden');
+        extraInfo.classList.toggle('visible');
+        button.classList.toggle('rotate');
+      }
+    });
+  });
 });
