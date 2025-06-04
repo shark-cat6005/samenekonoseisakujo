@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (banner && bannerContainer) {
     window.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
-      const parallaxSpeed = 0.3; // 視差速度
+      const parallaxSpeed = 0.1; // 視差速度
       const offset = Math.max(0, Math.min(scrollY * parallaxSpeed, 50)); // 限制移動範圍
       banner.style.objectPosition = `center calc(100% - ${offset}%)`; // 動態調整圖片位置
     });

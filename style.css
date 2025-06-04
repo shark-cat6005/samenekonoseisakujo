@@ -75,6 +75,7 @@ header {
 
 /* card */
 .item {
+  position: relative;
   background: #1a1a1a;
   border: 1px solid #333;
   border-radius: 10px;
@@ -83,6 +84,7 @@ header {
   color: inherit;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 350px;
 }
 
 .item:hover {
@@ -145,6 +147,9 @@ header {
 }
 
 .type {
+  position: absolute;
+  bottom:-5px;
+  left: 10px;
   font-size: 0.8em;
   color: #aaa;
 }
