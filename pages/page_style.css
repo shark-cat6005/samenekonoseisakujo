@@ -336,3 +336,7 @@ header {
   display: inline-block; /* 確保按鈕可見 */
   cursor: pointer; /* 確保按鈕可點擊 */
 }
+
+.context-img {
+  border-radius: 10px;
+}
