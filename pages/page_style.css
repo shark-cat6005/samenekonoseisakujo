@@ -294,7 +294,7 @@ header {
 
 /* 下拉清單按鈕樣式 */
 .toggle-button {
-  background-color: #3a78c2; /* 深蓝色按钮 */
+  background-color: rgba(26, 35, 64, 0.8); /* 深蓝色按钮 */
   color: #ffffff; /* 白色文字 */
   padding: 5px 15px; /* 按钮内部上下间距为 5px，左右间距为 15px */
   margin: 5px 0; /* 按钮外部上下间距为 5px */
@@ -310,7 +310,7 @@ header {
 }
 
 .toggle-button:hover {
-  background-color: #2a5a92; /* 懸停時背景顏色變深 */
+  background-color: rgba(18, 27, 56, 0.8); /* 懸停時背景顏色變深 */
   transform: scale(1.05); /* 懸停時放大效果 */
 }
 
