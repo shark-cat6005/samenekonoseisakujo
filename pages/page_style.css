@@ -300,6 +300,7 @@ header {
   margin: 5px 0; /* 按钮外部上下间距为 5px */
   border: none;
   border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   font-size: 0.9em; /* 縮小字體大小 */
   display: flex; /* 使用 flex 排版 */
