@@ -339,5 +339,10 @@ header {
 }
 
 .context-img {
-  border-radius: 10px;
+  width: 100%;              /* 圖片寬度跟隨容器 */
+  height: auto;             /* 保持原始比例 */
+  max-width: 100%;          /* 不超過容器寬度 */
+  border-radius: 10px;      /* 邊角圓弧 */
+  display: block;           /* 避免下方有空白（行內元素預設行高問題） */
+  object-fit: cover;        /* 若搭配固定高度容器使用，維持比例填滿 */
 }
