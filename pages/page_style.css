@@ -311,7 +311,7 @@ header {
 }
 
 .toggle-button:hover {
-  background-color: #3a78c2; /* 懸停時背景顏色變深 */
+  background-color: #304381cc; /* 懸停時背景顏色變深 */
   transform: scale(1.05); /* 懸停時放大效果 */
 }
 
