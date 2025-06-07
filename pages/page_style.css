@@ -40,16 +40,22 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* 確保背景在其他內容後面 */
-  pointer-events: none; /* 禁止鼠標事件，避免影響其他元素 */
-  filter: blur(10px); /* 初始模糊 */
-  transition: filter 2s linear; /* 平滑過渡 */
+  z-index: -1;
+  /* 確保背景在其他內容後面 */
+  pointer-events: none;
+  /* 禁止鼠標事件，避免影響其他元素 */
+  filter: blur(10px);
+  /* 初始模糊 */
+  transition: filter 2s linear;
+  /* 平滑過渡 */
 }
 
 #star-canvas {
   z-index: -1;
-  filter: blur(10px); /* 初始高斯模糊 */
-  transition: filter 2s linear; /* 線性模糊過渡 */
+  filter: blur(10px);
+  /* 初始高斯模糊 */
+  transition: filter 2s linear;
+  /* 線性模糊過渡 */
 }
 
 #light-canvas {
@@ -61,8 +67,10 @@ body {
   pointer-events: none;
   z-index: -1;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5));
-  filter: blur(10px); /* 初始高斯模糊 */
-  transition: filter 1.5s ease; /* 模糊過渡 */
+  filter: blur(10px);
+  /* 初始高斯模糊 */
+  transition: filter 1.5s ease;
+  /* 模糊過渡 */
 }
 
 /* 載入畫面樣式 */
@@ -72,20 +80,25 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.9); /* 深色背景，覆蓋星空 */
+  background: rgba(0, 0, 0, 0.9);
+  /* 深色背景，覆蓋星空 */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999; /* 確保載入畫面在最上層 */
-  opacity: 1; /* 確保初始時完全可見 */
-  transition: opacity 0.5s ease; /* 添加淡出動畫 */
+  z-index: 9999;
+  /* 確保載入畫面在最上層 */
+  opacity: 1;
+  /* 確保初始時完全可見 */
+  transition: opacity 0.5s ease;
+  /* 添加淡出動畫 */
 }
 
 #loader-bg {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #000; /* 背景顏色 */
+  background: #000;
+  /* 背景顏色 */
 }
 
 #pixel-spinner {
@@ -93,7 +106,8 @@ body {
   height: 64px;
   background: transparent;
   border-radius: 50%;
-  animation: spin 1s linear infinite; /* 旋轉動畫 */
+  animation: spin 1s linear infinite;
+  /* 旋轉動畫 */
 }
 
 /* 旋轉動畫 */
@@ -101,6 +115,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -109,52 +124,75 @@ body {
 /* Header 樣式 */
 header {
   display: flex;
-  align-items: flex-start; /* 垂直靠上對齊 */
-  justify-content: flex-start; /* 水平靠左對齊 */
-  height: 80px; /* 固定高度 */
-  padding: 0 20px; /* 保持左右內邊距 */
+  align-items: flex-start;
+  /* 垂直靠上對齊 */
+  justify-content: flex-start;
+  /* 水平靠左對齊 */
+  height: 80px;
+  /* 固定高度 */
+  padding: 0 20px;
+  /* 保持左右內邊距 */
   box-sizing: border-box;
 }
 
 /* LOGO容器樣式 */
 .logo-container {
   display: flex;
-  align-items: center; /* 垂直居中對齊 */
-  gap: 10px; /* 元素之間的間距 */
+  align-items: center;
+  /* 垂直居中對齊 */
+  gap: 10px;
+  /* 元素之間的間距 */
   text-decoration: none;
   color: var(--text-light);
-  position: relative; /* 使用相對定位 */
-  left: -25px; /* 向左偏移 */
+  position: relative;
+  /* 使用相對定位 */
+  left: -25px;
+  /* 向左偏移 */
 }
 
 /* LOGO小字樣式 */
 .logo-subtext {
-  font-size: 0.7em; /* 小字的字體大小 */
-  color: #aaa; /* 小字的顏色 */
-  font-style: italic; /* 斜體效果 */
-  line-height: 1; /* 確保行高與字體大小一致 */
-  position: relative; /* 使用相對定位 */
-  top: 4px; /* 向下微調，讓小字與 LOGO 文字對齊 */
-  left: -8px; /* 向右微調，讓小字與 LOGO 文字對齊 */
+  font-size: 0.7em;
+  /* 小字的字體大小 */
+  color: #aaa;
+  /* 小字的顏色 */
+  font-style: italic;
+  /* 斜體效果 */
+  line-height: 1;
+  /* 確保行高與字體大小一致 */
+  position: relative;
+  /* 使用相對定位 */
+  top: 4px;
+  /* 向下微調，讓小字與 LOGO 文字對齊 */
+  left: -8px;
+  /* 向右微調，讓小字與 LOGO 文字對齊 */
 }
 
 /* LOGO圖片樣式 */
 .logo {
-  height: 64px; /* 放大圖片高度 */
-  margin-right: -15px; /* 減少圖片與文字之間的間距 */
+  height: 64px;
+  /* 放大圖片高度 */
+  margin-right: -15px;
+  /* 減少圖片與文字之間的間距 */
   display: flex;
-  align-self: center; /* 確保圖片與文字平行 */
+  align-self: center;
+  /* 確保圖片與文字平行 */
 }
 
 /* LOGO文字樣式 */
 .logo-text {
   font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Noto Sans JP', sans-serif; /* 使用自訂字體 */
-  line-height: 1; /* 確保文字行高與字體大小一致 */
-  position: relative; /* 使用相對定位 */
-  top: -2px; /* 向上微調，讓文字與圖片平行 */
-  left: -5px; /* 向左移動 */
+  font-family: 'Noto Sans JP', sans-serif;
+  /* 使用自訂字體 */
+  line-height: 1;
+  /* 確保文字行高與字體大小一致 */
+  position: relative;
+  /* 使用相對定位 */
+  top: -2px;
+  /* 向上微調，讓文字與圖片平行 */
+  left: -5px;
+  /* 向左移動 */
 }
 
 /* Banner 樣式 */
@@ -174,10 +212,14 @@ header {
 .banner-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 確保圖片填滿容器 */
-  object-position: bottom; /* 初始位置：顯示圖片底部 */
-  transform: none; /* 不使用 transform，改用 object-position */
-  transition: none; /* 移除過渡效果，確保滾動時即時更新 */
+  object-fit: cover;
+  /* 確保圖片填滿容器 */
+  object-position: bottom;
+  /* 初始位置：顯示圖片底部 */
+  transform: none;
+  /* 不使用 transform，改用 object-position */
+  transition: none;
+  /* 移除過渡效果，確保滾動時即時更新 */
 }
 
 .banner-title {
@@ -194,34 +236,45 @@ header {
 
 /* 固定 Pack Info 區塊的位置，避免跳動 */
 .pack-info {
-  margin-top: 20px; /* 固定與 banner 的距離 */
+  margin-top: 20px;
+  /* 固定與 banner 的距離 */
   padding: 20px;
   background: none;
   border-radius: 0;
   box-shadow: none;
   text-align: left;
-  color: var(--text-light); /* 保持文字顏色 */
+  color: var(--text-light);
+  /* 保持文字顏色 */
 }
 
 .pack-info h3 {
   font-size: 1.5em;
-  color: var(--highlight); /* 使用主題中的高光顏色 */
+  color: var(--highlight);
+  /* 使用主題中的高光顏色 */
   margin-bottom: 10px;
-  font-family: 'Inter', sans-serif; /* 使用現代字體 */
-  text-align: center; /* 確保文字居中 */
+  font-family: 'Inter', sans-serif;
+  /* 使用現代字體 */
+  text-align: center;
+  /* 確保文字居中 */
 }
 
 .pack-info p {
   font-size: 1em;
   line-height: 1.5;
-  color: var(--text-muted); /* 使用較柔和的文字顏色 */
-  font-family: 'Inter', sans-serif; /* 使用現代字體 */
+  color: var(--text-muted);
+  /* 使用較柔和的文字顏色 */
+  font-family: 'Inter', sans-serif;
+  /* 使用現代字體 */
 }
 
 /* 下載按鈕容器樣式 */
 .download-container {
-  margin-top: 20px; /* 與上方內容保持距離 */
-  text-align: center; /* 按鈕居中 */
+  margin-top: 20px;
+  /* 與上方內容保持距離 */
+  text-align: center;
+  /* 按鈕居中 */
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 /* 下載按鈕樣式 */
@@ -234,115 +287,169 @@ header {
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
-  transition: transform 0.2s ease, background-color 0.3s ease; /* 添加過渡效果 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  /* 添加陰影效果 */
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  /* 添加過渡效果 */
 }
 
 .download-button:hover {
-  transform: scale(1.05); /* 懸停時放大效果 */
-  background-color: #3a78c2; /* 懸停時背景顏色變深 */
+  transform: scale(1.05);
+  /* 懸停時放大效果 */
+  background-color: #304381cc;
+  /* 懸停時背景顏色變深 */
 }
 
 /* 連結樣式 */
 .pack-info a {
-  color: var(--highlight); /* 使用主題中的高光顏色 */
-  text-decoration: none; /* 移除下劃線 */
-  font-weight: bold; /* 加粗字體 */
-  transition: color 0.3s ease; /* 添加過渡效果 */
+  color: var(--highlight);
+  /* 使用主題中的高光顏色 */
+  text-decoration: none;
+  /* 移除下劃線 */
+  font-weight: bold;
+  /* 加粗字體 */
+  transition: color 0.3s ease;
+  /* 添加過渡效果 */
 }
 
 .pack-info a:hover {
-  color: #3a78c2; /* 懸停時顏色變深 */
+  color: #3a78c2;
+  /* 懸停時顏色變深 */
 }
 
 /* 下拉清單樣式 */
 .extra-info {
-  margin-top: 20px; /* 與上方物件保持距離 */
-  margin-bottom: 20px; /* 與下方物件保持距離 */
-  padding: 10px 10px; /* 內容物的上下空間為 10px，左右空間為 10px */
-  background-color: transparent; /* 完全透明背景 */
-  border-radius: 10px; /* 圓弧邊角 */
-  outline: 1px solid rgba(255, 255, 255, 0.8); /* 白色發光邊框 */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 添加柔和的發光效果 */
-  display: none; /* 初始隱藏 */
-  color: #ffffff; /* 白色文字，保持清晰可見 */
-  min-height: 5px; /* 設置最低高度為 5px */
+  margin-top: 20px;
+  /* 與上方物件保持距離 */
+  margin-bottom: 20px;
+  /* 與下方物件保持距離 */
+  padding: 10px 10px;
+  /* 內容物的上下空間為 10px，左右空間為 10px */
+  background-color: transparent;
+  /* 完全透明背景 */
+  border-radius: 10px;
+  /* 圓弧邊角 */
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+  /* 白色發光邊框 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  /* 添加柔和的發光效果 */
+  display: none;
+  /* 初始隱藏 */
+  color: #ffffff;
+  /* 白色文字，保持清晰可見 */
+  min-height: 5px;
+  /* 設置最低高度為 5px */
 }
 
 .extra-info p {
-  margin: 5px 0; /* 設置上下間距為 5px */
-  line-height: 1.5; /* 調整行高 */
-  text-indent: 10px; /* 文字與左側保持距離 */
+  margin: 5px 0;
+  /* 設置上下間距為 5px */
+  line-height: 1.5;
+  /* 調整行高 */
+  text-indent: 10px;
+  /* 文字與左側保持距離 */
 }
 
 /* 嵌套下拉清單樣式 */
 .extra-info .extra-info {
-  margin-left: 20px; /* 嵌套下拉清單向右偏移 */
-  padding-left: 15px; /* 內部文字與左側保持距離 */
-  outline: 1px solid rgba(255, 255, 255, 0.8); /* 白色發光邊框 */
-  border-radius: 10px; /* 圓弧邊角 */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 添加柔和的發光效果 */
+  margin-left: 20px;
+  /* 嵌套下拉清單向右偏移 */
+  padding-left: 15px;
+  /* 內部文字與左側保持距離 */
+  outline: 1px solid rgba(255, 255, 255, 0.8);
+  /* 白色發光邊框 */
+  border-radius: 10px;
+  /* 圓弧邊角 */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  /* 添加柔和的發光效果 */
 }
 
 .hidden {
-  display: none; /* 隱藏元素 */
+  display: none;
+  /* 隱藏元素 */
 }
 
 .visible {
-  display: block; /* 顯示元素 */
+  display: block;
+  /* 顯示元素 */
 }
 
 /* 下拉清單按鈕樣式 */
 .toggle-button {
-  background-color: rgba(26, 35, 64, 0.8); /* 深蓝色按钮 */
-  color: #ffffff; /* 白色文字 */
-  padding: 5px 15px; /* 按钮内部上下间距为 5px，左右间距为 15px */
-  margin: 5px 0; /* 按钮外部上下间距为 5px */
+  background-color: rgba(26, 35, 64, 0.8);
+  /* 深蓝色按钮 */
+  color: #ffffff;
+  /* 白色文字 */
+  padding: 5px 15px;
+  /* 按钮内部上下间距为 5px，左右间距为 15px */
+  margin: 5px 0;
+  /* 按钮外部上下间距为 5px */
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  font-size: 0.9em; /* 縮小字體大小 */
-  display: flex; /* 使用 flex 排版 */
-  align-items: center; /* 垂直居中 */
-  justify-content: space-between; /* 左右對齊 */
-  gap: 10px; /* 按鈕內部元素間距 */
+  font-size: 0.9em;
+  /* 縮小字體大小 */
+  display: flex;
+  /* 使用 flex 排版 */
+  align-items: center;
+  /* 垂直居中 */
+  justify-content: space-between;
+  /* 左右對齊 */
+  gap: 10px;
+  /* 按鈕內部元素間距 */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .toggle-button:hover {
-  background-color: #304381cc; /* 懸停時背景顏色變深 */
-  transform: scale(1.05); /* 懸停時放大效果 */
+  background-color: #304381cc;
+  /* 懸停時背景顏色變深 */
+  transform: scale(1.05);
+  /* 懸停時放大效果 */
 }
 
 /* 三角形樣式 */
 .toggle-button::before {
-  content: ''; /* 添加三角形 */
+  content: '';
+  /* 添加三角形 */
   display: inline-block;
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #ffffff; /* 白色三角形 */
-  margin-left: auto; /* 將三角形推到右側 */
-  margin-right: 15px; /* 與文字保持更大的距離 */
-  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1); /* 拋物線速度 */
+  border-top: 6px solid #ffffff;
+  /* 白色三角形 */
+  margin-left: auto;
+  /* 將三角形推到右側 */
+  margin-right: 15px;
+  /* 與文字保持更大的距離 */
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  /* 拋物線速度 */
 }
 
 .toggle-button.rotate::before {
-  transform: rotate(180deg); /* 三角形旋轉 */
+  transform: rotate(180deg);
+  /* 三角形旋轉 */
 }
 
 .toggle-button {
-  display: inline-block; /* 確保按鈕可見 */
-  cursor: pointer; /* 確保按鈕可點擊 */
+  display: inline-block;
+  /* 確保按鈕可見 */
+  cursor: pointer;
+  /* 確保按鈕可點擊 */
 }
 
 .context-img {
-  width: 100%;              /* 圖片寬度跟隨容器 */
-  height: auto;             /* 保持原始比例 */
-  max-width: 100%;          /* 不超過容器寬度 */
-  border-radius: 10px;      /* 邊角圓弧 */
-  display: block;           /* 避免下方有空白（行內元素預設行高問題） */
-  object-fit: cover;        /* 若搭配固定高度容器使用，維持比例填滿 */
+  width: 100%;
+  /* 圖片寬度跟隨容器 */
+  height: auto;
+  /* 保持原始比例 */
+  max-width: 100%;
+  /* 不超過容器寬度 */
+  border-radius: 10px;
+  /* 邊角圓弧 */
+  display: block;
+  /* 避免下方有空白（行內元素預設行高問題） */
+  object-fit: cover;
+  /* 若搭配固定高度容器使用，維持比例填滿 */
 }
