@@ -106,10 +106,12 @@ header {
 }
 
 .icon-and-name {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
+  top: -25px;
 }
 
 .pack-icon-container {
@@ -124,9 +126,11 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
   background: #fff;
   transition: transform 0.3s ease;
+  position: relative;
+  top: -17px;
 }
 
 .icon-and-name .title {
@@ -134,6 +138,7 @@ header {
   font-weight: bold;
   color: #fff;
   margin: 0;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .description-and-type {
@@ -144,11 +149,13 @@ header {
   font-size: 0.9em;
   color: #ccc;
   margin: 0 0 5px;
+  position: relative;
+  top: -50px;
 }
 
 .type {
   position: absolute;
-  bottom:-5px;
+  bottom: -5px;
   left: 10px;
   font-size: 0.8em;
   color: #aaa;
