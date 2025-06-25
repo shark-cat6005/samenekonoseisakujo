@@ -1,15 +1,18 @@
 const cards = [
   {
     title: "Auto Restocker",
-    description: "Automatically refill your inventory with this useful addon for Minecraft!",
+    description: "Automatically refill your inventory with this useful addon for Minecraft!" +
+      "<br><br>v1.0.0&nbsp;&nbsp;&nbsp;&nbsp;<i>M</i> 1.21.70" +
+      // "<br><i>*updating</i>" +
+      "",
     type: "Script",
     backgroundImage: "assets/autoRestocker.banner.png",
     iconImage: "assets/autoRestocker.pack_icon.png",
     link: "pages/autoRestocker.page.view/autoRestocker.page.html"
   },
   {
-    title: "TPSV",
-    description: "Display TPS",
+    title: "<i>TPSV</i>",
+    description: "Display TPS<br><br><i>*outdated</i>",
     type: "Script",
     backgroundImage: "assets/tpsv.banner.png",
     iconImage: "assets/tpsv.pack_icon.png",
