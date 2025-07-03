@@ -97,6 +97,14 @@ const cards = [
     backgroundImage: "assets/unknown.png",
     iconImage: "assets/unknown.pack_icon.png",
     link: "pages/view/unknown/unknown.page.html"
+  },
+  {
+    title: "Coming soon...",
+    description: "Coming soon...",
+    type: "",
+    backgroundImage: "assets/unknown.png",
+    iconImage: "assets/unknown.pack_icon.png",
+    link: "pages/view/unknown/unknown.page.html"
   }
 ];
 
@@ -149,27 +157,96 @@ window.addEventListener('load', () => {
     }, 500);
   }
 });
+
+// 1. 替换 drawStars 函数和相关逻辑
+// 2. 添加全局变量 stars 和 animationId
+
+let stars = [];
+let animationId;
+
+// 初始化星星属性
+function initStars() {
+  stars = [];
+  const starCanvas = document.getElementById('star-canvas');
+  if (!starCanvas) return;
+  for (let i = 0; i < (starCanvas.height * starCanvas.width) / 1250; i++) {
+    stars.push({
+      x: Math.random() * starCanvas.width,
+      y: Math.random() * starCanvas.height,
+      radius: Math.random() * 2,
+      speedX: (Math.random() - 0.5) * 0.5,
+      speedY: (Math.random() - 0.5) * 0.5,
+      alpha: Math.random(),
+      alphaSpeed: (Math.random() - 0.5) * 0.02,
+    });
+  }
+}
+
+// 绘制星星并实现闪烁和移动效果
 function drawStars() {
   const starCanvas = document.getElementById('star-canvas');
   if (!starCanvas) return;
+  const starCtx = starCanvas.getContext('2d');
+  starCtx.clearRect(0, 0, starCanvas.width, starCanvas.height);
 
-  const ctx = starCanvas.getContext('2d');
-  const width = starCanvas.width = window.innerWidth;
-  const height = starCanvas.height = window.innerHeight;
+  stars.forEach(star => {
+    // 更新星星位置
+    star.x += star.speedX;
+    star.y += star.speedY;
 
-  ctx.clearRect(0, 0, width, height);
+    // 边界检测
+    if (star.x < 0) star.x = starCanvas.width;
+    if (star.x > starCanvas.width) star.x = 0;
+    if (star.y < 0) star.y = starCanvas.height;
+    if (star.y > starCanvas.height) star.y = 0;
 
-  for (let i = 0; i < 100; i++) {
-    const x = Math.random() * width;
-    const y = Math.random() * height;
-    const radius = Math.random() * 1.5;
-    ctx.beginPath();
-    ctx.arc(x, y, radius, 0, Math.PI * 2);
-    ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
-    ctx.fill();
-  }
+    // 闪烁
+    star.alpha += star.alphaSpeed;
+    if (star.alpha > 1 || star.alpha < 0.3) {
+      star.alphaSpeed = -star.alphaSpeed;
+    }
+
+    // 绘制
+    starCtx.beginPath();
+    starCtx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    const gradient = starCtx.createRadialGradient(
+      star.x, star.y, 0,
+      star.x, star.y, star.radius
+    );
+    gradient.addColorStop(0, `rgba(255,255,255,${star.alpha})`);
+    gradient.addColorStop(1, `rgba(255,255,255,0)`);
+    starCtx.fillStyle = gradient;
+    starCtx.fill();
+  });
+
+  animationId = requestAnimationFrame(drawStars);
 }
-window.addEventListener('load', drawStars);
+
+// 监听窗口大小变化，重新初始化星星
+function resizeStars() {
+  const starCanvas = document.getElementById('star-canvas');
+  if (!starCanvas) return;
+  starCanvas.width = window.innerWidth;
+  starCanvas.height = window.innerHeight;
+  initStars();
+}
+window.addEventListener('resize', () => {
+  resizeStars();
+});
+
+// 页面加载时初始化星星动画
+window.addEventListener('DOMContentLoaded', () => {
+  resizeStars();
+  // 不要在这里调用 drawStars()
+});
+
+// 页面卸载时停止动画
+window.addEventListener('beforeunload', () => {
+  if (animationId) {
+    cancelAnimationFrame(animationId);
+  }
+});
+
 function drawPixelSpinner(ctx, progress = 0) {
   ctx.clearRect(0, 0, 64, 64);
   const px = 8;
@@ -207,7 +284,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const loaderBg = document.getElementById('loader-bg');
   const pixelSpinner = document.getElementById('pixel-spinner');
   function resize() {
+    const starCanvas = document.getElementById('star-canvas');
+    const lightCanvas = document.getElementById('light-canvas');
+    const loaderBg = document.getElementById('loader-bg');
     [starCanvas, lightCanvas, loaderBg].forEach(c => {
+      if (!c) return;
       c.width = window.innerWidth;
       c.height = window.innerHeight;
       c.style.width = window.innerWidth + "px";
@@ -216,16 +297,18 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   resize();
   window.addEventListener('resize', resize);
+  const starCanvas = document.getElementById('star-canvas'); // 修正：加上这一行
   const loaderBgCtx = loaderBg.getContext('2d');
-  drawStars();
-  loaderBgCtx.drawImage(starCanvas, 0, 0);
   setTimeout(() => {
     const lightCtx = lightCanvas.getContext('2d');
-    const dots = Array.from({ length: 18 }, () => new LightDot(lightCanvas.width, lightCanvas.height));
-    animateLights(lightCtx, lightCanvas.width, lightCanvas.height, dots);
+    // const dots = Array.from({ length: 18 }, () => new LightDot(lightCanvas.width, lightCanvas.height));
+    // animateLights(lightCtx, lightCanvas.width, lightCanvas.height, dots);
     loader.style.opacity = 0;
     if (pixelSpinner && pixelSpinner._spinReq) cancelAnimationFrame(pixelSpinner._spinReq);
-    setTimeout(() => loader.style.display = "none", 400);
+    setTimeout(() => {
+      loader.style.display = "none";
+      drawStars(); // loader消失後再啟動星星動畫
+    }, 400);
   }, 900);
 });
 

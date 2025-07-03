@@ -352,9 +352,9 @@ header {
 
 /* 嵌套下拉清單樣式 */
 .extra-info .extra-info {
-  margin-left: 20px;
+  margin-left: 0px;
   /* 嵌套下拉清單向右偏移 */
-  padding-left: 15px;
+  /* padding-left: 10px; */
   /* 內部文字與左側保持距離 */
   outline: 1px solid rgba(255, 255, 255, 0.8);
   /* 白色發光邊框 */
